@@ -57,10 +57,10 @@ import { Button, Stack, Message } from "aether-ui"
 
 const Main = () => {
     return (
-    <Stack direction="col">
-        <Message>You have successfully imported Aether UI!</Message>
-        <Button onClick={() => alert("Hello World!")}>Click Me!</Button>
-    </Stack>
+      <Stack direction="col">
+          <Message>You have successfully imported Aether UI!</Message>
+          <Button onClick={() => alert("Hello World!")}>Click Me!</Button>
+      </Stack>
     )
 }
 
