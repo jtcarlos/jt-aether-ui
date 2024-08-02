@@ -1,0 +1,3 @@
+# ignore source files
+/src
+/node_modules
