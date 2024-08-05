@@ -6,7 +6,7 @@ export const buttonSize = {
 }
 
 export const buttonVariant = {
-  default: "text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 border-transparent",
+  default: "bg-white border-transparent text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50",
   primary: "bg-primary border-primary text-white hover:bg-primary-hover",
   secondary: "bg-secondary border-secondary text-white hover:bg-secondary-hover",
   danger: "bg-danger border-danger text-white hover:bg-danger-hover",
@@ -14,5 +14,4 @@ export const buttonVariant = {
   warning: "bg-warning border-warning text-white hover:bg-warning-hover",
   outlined:
     "bg-transparent border-primary text-primary hover:bg-primary-hover hover:text-white ring-1 ring-inset ring-primary",
-  text: "bg-transparent border-none text-primary hover:bg-primary-hover-text",
 }

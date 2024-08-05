@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faCircleNotch, IconDefinition } from "@fortawesome/free-solid-svg-icons"
 
 type ButtonSize = "xs" | "sm" | "md" | "lg"
-type ButtonVariant = "default" | "primary" | "secondary" | "danger" | "success" | "warning" | "outlined" | "text"
+type ButtonVariant = "default" | "primary" | "secondary" | "danger" | "success" | "warning" | "outlined"
 
 type ButtonIcon = { left?: IconDefinition; right?: IconDefinition }
 
@@ -38,7 +38,7 @@ interface ButtonProps
  *
  * @returns {ReactNode} renders Aether UI's button component
  */
-const Button: React.FC<ButtonProps> = ({ children, text, size = "md", variant = "primary", ...props }) => {
+const Button: React.FC<ButtonProps> = ({ children, text, size = "md", variant = "default", ...props }) => {
   let textSize = buttonSize[size]
   let buttonColor = buttonVariant[variant]
 

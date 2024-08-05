@@ -8,22 +8,22 @@ import {
 export const messageVariants = {
   info: {
     icon: faCircleInfo,
-    color: "text-primary",
-    border: "border-l-primary",
+    iconColor: "text-info",
+    color: "border-l-info bg-info-message",
   },
   success: {
     icon: faCircleCheck,
-    color: "text-success",
-    border: "border-l-success",
+    iconColor: "text-success",
+    color: "border-l-success bg-success-message",
   },
   danger: {
     icon: faCircleExclamation,
-    color: "text-danger",
-    border: "border-l-danger",
+    iconColor: "text-danger",
+    color: "border-l-danger bg-danger-message",
   },
   warning: {
     icon: faTriangleExclamation,
-    color: "text-warning",
-    border: "border-l-warning",
+    iconColor: "text-warning",
+    color: "border-l-warning bg-warning-message",
   },
 }

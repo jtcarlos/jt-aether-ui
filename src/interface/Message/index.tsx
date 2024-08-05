@@ -28,12 +28,12 @@ const Message: React.FC<MessageProps> = ({ children, text, variant = "info", fit
 
   return (
     <article
-      className={classNames("border-l-4 border border-slate-100 rounded-md p-5 shadow", config.border, {
+      className={classNames("border-l-4 border border-slate-100 rounded-md p-5 border", config.color, {
         "w-[38rem]": fit,
       })}
     >
       <Stack>
-        <FontAwesomeIcon className={classNames("mt-1", config.color)} icon={config.icon} />
+        <FontAwesomeIcon className={classNames("mt-1", config.iconColor)} icon={config.icon} />
         {text ?? children}
       </Stack>
     </article>
