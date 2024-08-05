@@ -32,7 +32,7 @@ const Message: React.FC<MessageProps> = ({ children, text, variant = "info", fit
         "w-[38rem]": fit,
       })}
     >
-      <Stack>
+      <Stack direction="row">
         <FontAwesomeIcon className={classNames("mt-1", config.iconColor)} icon={config.icon} />
         {text ?? children}
       </Stack>
