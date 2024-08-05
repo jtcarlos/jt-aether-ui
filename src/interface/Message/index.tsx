@@ -21,7 +21,7 @@ interface MessageProps {
  * @param {boolean} fit defaults to false, if set to true the component will take up the remaining width space
  * @param {string} text determines the text to display inside the message
  *
- * @returns {React.ReactNode} renders Aether UI's messafge component
+ * @returns {React.ReactNode} renders Aether UI's message component
  */
 const Message: React.FC<MessageProps> = ({ children, text, variant = "info", fit = true }) => {
   const config = messageVariants[variant]
