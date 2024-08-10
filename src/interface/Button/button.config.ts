@@ -1,7 +1,7 @@
 export const buttonSize = {
-  xs: "text-sm px-2 py-1",
-  sm: "text-sm px-2 py-1.5",
-  md: "text-base px-3 py-2",
+  xs: "text-xs px-2 py-1",
+  sm: "text-xs px-2 py-1.5",
+  md: "text-sm px-3 py-2",
   lg: "text-base px-3.5 py-2.5",
 }
 

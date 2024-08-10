@@ -1,8 +1,6 @@
 import React from "react"
 import classNames from "classnames"
 
-import Stack from "../../layout/Stack"
-
 import { faXmark } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
@@ -55,10 +53,13 @@ const Modal: React.FC<ModalProps> = ({ open, hideClose, className, header, body,
                 <FontAwesomeIcon icon={faXmark} />
               </button>
             )}
-            <div className={classNames("bg-white px-4 py-5 sm:p-6", className)}>
+            <div className={classNames("bg-white px-4 py-5 sm:p-6 text-center sm:text-left", className)}>
               {header?.content && (
                 <h3
-                  className={classNames("text-2xl font-semibold leading-6 text-gray-900 mb-5", header?.className)}
+                  className={classNames(
+                    "text-2xl font-semibold leading-6 text-gray-900 mt-3 sm:mt-0",
+                    header?.className
+                  )}
                   id="aether-modal-title"
                 >
                   {header.content}
@@ -67,7 +68,7 @@ const Modal: React.FC<ModalProps> = ({ open, hideClose, className, header, body,
               {body?.content && <div className={classNames("mt-2 text-gray-600", body.className)}>{body.content}</div>}
             </div>
             {footer?.content && (
-              <Stack className={classNames("bg-gray-50 px-4 py-4", footer?.className)}>{footer?.content}</Stack>
+              <div className={classNames("bg-gray-50 px-4 py-4 sm:px-6", footer?.className)}>{footer?.content}</div>
             )}
           </div>
         </div>

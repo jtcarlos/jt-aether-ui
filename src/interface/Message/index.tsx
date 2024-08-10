@@ -29,7 +29,7 @@ const Message: React.FC<MessageProps> = ({ children, text, variant = "info", fit
   return (
     <article
       className={classNames("border-l-4 border border-slate-100 rounded-md p-5 border", config.color, {
-        "w-[38rem]": fit,
+        "w-full md:w-[38rem]": fit,
       })}
     >
       <Stack direction="row">
