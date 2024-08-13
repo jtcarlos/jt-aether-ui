@@ -5,14 +5,14 @@ import { faBars } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 import { navbarAlignment } from "./navbar.config"
-import { navbarLinks, navbarLogo, alignments, desktopAddon, mobileAddon } from "./navbar.types"
+import { NavbarLinks, NavbarLogo, Alignments, DesktopAddon, MobileAddon } from "./navbar.types"
 
 interface NavbarProps {
-  logo: navbarLogo
-  links: navbarLinks
-  align?: alignments
-  mobileAddon?: mobileAddon
-  desktopAddon?: desktopAddon
+  logo: NavbarLogo
+  links: NavbarLinks
+  align?: Alignments
+  mobileAddon?: MobileAddon
+  desktopAddon?: DesktopAddon
 
   className?: string
   pageTitle?: string
@@ -24,12 +24,12 @@ interface NavbarProps {
 /**
  * @description Aether UI navbar component
  *
- * @param {navbarLogo} logo sets the logo details such as source and sizings
- * @param {navbarLinks} links sets the navigation links
- * @param {alignments} align sets the alignment of the navigation links
+ * @param {NavbarLogo} logo sets the logo details such as source and sizings
+ * @param {NavbarLinks} links sets the navigation links
+ * @param {Alignments} align sets the alignment of the navigation links
  * @param {string} pageTitle current page title, used to check if what link to highlight
- * @param {mobileAddon} mobileAddon mobile addons beside the hamburder icon
- * @param {desktopAddon} desktopAddon desktop addons beside the navigation links
+ * @param {MobileAddon} mobileAddon mobile addons beside the hamburder icon
+ * @param {DesktopAddon} desktopAddon desktop addons beside the navigation links
  *
  * @returns renders Aether UI's navbar component
  */

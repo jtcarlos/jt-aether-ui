@@ -1,23 +1,23 @@
 import React from "react"
 import classNames from "classnames"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 import Stack from "../../layout/Stack"
-import { messageVariants } from "./message.config"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
-type variants = "info" | "danger" | "warning" | "success"
+import { Variants } from "./message.types"
+import { messageVariants } from "./message.config"
 
 interface MessageProps {
   fit?: boolean
   text?: string
-  variant?: variants
+  variant?: Variants
   children?: React.ReactNode
 }
 
 /**
  * @description Aether UI message component
  *
- * @param {variants} variant determines the variant of the message component
+ * @param {Variants} variant determines the variant of the message component
  * @param {boolean} fit defaults to false, if set to true the component will take up the remaining width space
  * @param {string} text determines the text to display inside the message
  *

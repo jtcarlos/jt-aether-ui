@@ -1,6 +1,6 @@
 import React from "react"
 
-export type navbarLogo = {
+export type NavbarLogo = {
   width: number
   height: number
   imageAlt: string
@@ -8,15 +8,15 @@ export type navbarLogo = {
   onLogoClick?: () => void
 }
 
-export type desktopAddon = {
+export type DesktopAddon = {
   className?: string
   addon?: React.ReactNode
 }
 
-export type mobileAddon = {
+export type MobileAddon = {
   className?: string
   addon?: React.ReactNode
 }
 
-export type alignments = "start" | "center" | "end"
-export type navbarLinks = { label: string; onClick?: () => void }[]
+export type Alignments = "start" | "center" | "end"
+export type NavbarLinks = { label: string; onClick?: () => void }[]

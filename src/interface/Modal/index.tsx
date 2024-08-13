@@ -4,10 +4,7 @@ import classNames from "classnames"
 import { faXmark } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
-type ModalContent = {
-  className?: string
-  content: React.ReactNode
-}
+import { ModalContent } from "./modal.types"
 
 interface ModalProps {
   open: boolean

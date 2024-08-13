@@ -1,27 +1,24 @@
 import React from "react"
 import classNames from "classnames"
 
+import { Alignments, Justifications, Directions } from "./stack.types"
 import { stackDirection, stackAlignment, stackJustification } from "./stack.config"
-
-type directions = "row" | "col"
-type alignments = "start" | "end" | "center" | "baseline" | "stretch"
-type justifications = "normal" | "start" | "end" | "center" | "between" | "around" | "evenly" | "stretch"
 
 interface StackProps {
   gap?: string
-  align?: alignments
+  align?: Alignments
   className?: string
-  direction?: directions
-  justify?: justifications
+  direction?: Directions
+  justify?: Justifications
   children: React.ReactNode
 }
 
 /**
  * @description stacks all children either in a vertical or horizontal manner
  *
- * @param {alignments} align determines the flex alignment of the items
- * @param {directions} direction determines the flex direction of the items
- * @param {justifications} justify determines the flex justification of the items
+ * @param {Alignments} align determines the flex alignment of the items
+ * @param {Directions} direction determines the flex direction of the items
+ * @param {Justifications} justify determines the flex justification of the items
  *
  * @param {string} gap determines the gap of the flex items
  * @param {string} className overrides the default classes

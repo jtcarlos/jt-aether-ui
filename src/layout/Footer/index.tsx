@@ -1,19 +1,19 @@
 import React from "react"
 import classNames from "classnames"
 
-import { footerBody, footerLinks } from "./footer.types"
+import { FooterBody, FooterLinks } from "./footer.types"
 
 interface FooterProps {
-  body: footerBody
-  links?: footerLinks
+  body: FooterBody
+  links?: FooterLinks
   className?: string
 }
 
 /**
  * @description Aether UI footer component
  *
- * @param {footerBody} body main content of the footer component
- * @param {footerLinks} links sets the footer links
+ * @param {FooterBody} body main content of the footer component
+ * @param {FooterLinks} links sets the footer links
  * @param {string} className style class overrides for the footer component
  *
  * @returns renders Aether UI's footer component
