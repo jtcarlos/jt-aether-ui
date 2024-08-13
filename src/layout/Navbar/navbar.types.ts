@@ -5,6 +5,7 @@ export type navbarLogo = {
   height: number
   imageAlt: string
   imageSource: string
+  onLogoClick?: () => void
 }
 
 export type desktopAddon = {
@@ -18,4 +19,4 @@ export type mobileAddon = {
 }
 
 export type alignments = "start" | "center" | "end"
-export type navbarLinks = { label: string; link: string; callback?: () => void }[]
+export type navbarLinks = { label: string; onClick?: () => void }[]

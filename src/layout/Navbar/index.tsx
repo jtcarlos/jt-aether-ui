@@ -1,9 +1,6 @@
-import React, { useState } from "react"
-import { useRouter } from "next/router"
+import React from "react"
 import classNames from "classnames"
 
-import Link from "next/link"
-import Image from "next/image"
 import { faBars } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
@@ -14,10 +11,14 @@ interface NavbarProps {
   logo: navbarLogo
   links: navbarLinks
   align?: alignments
-  className?: string
-  pageTitle?: string
   mobileAddon?: mobileAddon
   desktopAddon?: desktopAddon
+
+  className?: string
+  pageTitle?: string
+  isDrawerOpen?: boolean
+
+  setIsDrawerOpen?: () => void
 }
 
 /**
@@ -39,28 +40,32 @@ const Navbar: React.FC<NavbarProps> = ({
   className,
   mobileAddon,
   desktopAddon,
+  isDrawerOpen,
   align = "end",
+  setIsDrawerOpen,
 }) => {
-  const [isMobileDrawOpen, setIsMobileDrawOpen] = useState(false)
-
-  const router = useRouter()
   const alignment = navbarAlignment[align]
 
   return (
     <nav className={classNames("sticky top-0 z-10 border-b bg-white border-gray-200", className)}>
       <div className="container mx-auto px-6 py-3 flex flex-wrap md:flex-nowrap justify-between items-center">
-        <Link href="/">
-          <Image src={logo.imageSource} width={logo.width} height={logo.height} alt={logo.imageAlt} unoptimized />
-        </Link>
+        <img
+          width={logo.width}
+          alt={logo.imageAlt}
+          height={logo.height}
+          src={logo.imageSource}
+          onClick={logo.onLogoClick}
+          className="cursor-pointer"
+        />
 
         <div className="flex items-center">
           {mobileAddon && <div className={classNames("md:hidden", mobileAddon?.className)}>{mobileAddon.addon}</div>}
           <button
             type="button"
             aria-expanded="false"
+            onClick={setIsDrawerOpen}
             aria-controls="navbar-dropdown"
             data-collapse-toggle="navbar-dropdown"
-            onClick={() => setIsMobileDrawOpen(!isMobileDrawOpen)}
             className="md:hidden rounded-lg inline-flex items-center p-2 ml-2 text-xl text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
           >
             <FontAwesomeIcon icon={faBars} />
@@ -70,7 +75,7 @@ const Navbar: React.FC<NavbarProps> = ({
         <div className={classNames("w-full flex", alignment)} id="navbar-dropdown">
           <ul
             className={classNames(
-              { "hidden md:flex": !isMobileDrawOpen },
+              { "hidden md:flex": !isDrawerOpen },
               "rounded-md p-4 mt-4 w-full md:w-auto md:p-0 md:mt-0 md:space-x-2 border md:border-0 font-medium flex items-center flex-col md:flex-row border-gray-100 bg-gray-50 md:bg-white"
             )}
           >
@@ -83,7 +88,7 @@ const Navbar: React.FC<NavbarProps> = ({
                       "bg-primary text-white md:bg-white md:text-primary": pageTitle === item?.label,
                     }
                   )}
-                  onClick={() => router.push(item?.link)}
+                  onClick={item?.onClick}
                 >
                   {item?.label}
                 </button>
