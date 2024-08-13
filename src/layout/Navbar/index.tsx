@@ -47,7 +47,7 @@ const Navbar: React.FC<NavbarProps> = ({
   const alignment = navbarAlignment[align]
 
   return (
-    <nav className={classNames("sticky top-0 z-10 border-b bg-white border-gray-200", className)}>
+    <nav className={classNames("sticky top-0 z-10 mb-10 border-b bg-white border-gray-200", className)}>
       <div className="container mx-auto px-6 py-3 flex flex-wrap md:flex-nowrap justify-between items-center">
         <img
           width={logo.width}
