@@ -7,23 +7,27 @@ import { sizes } from "./spinner.config"
 interface SpinnerProps {
   color?: string
   size?: Sizes
+  width?: string
+  height?: string
 }
 
 /**
  * @description Aether UI's spinner component
  *
+ * @param {string} width determines the height of the spinner
+ * @param {string} height determines the width of the spinner
  * @param {string} color determines the color of the spinner
  * @param {"xs" | "sm" | "md" | "lg"} size determines the size of the spinner in rem
  *
  * @returns render Aether UI's spinner component
  */
-const Spinner: React.FC<SpinnerProps> = ({ color, size = "md" }) => {
+const Spinner: React.FC<SpinnerProps> = ({ color, height, width, size = "md" }) => {
   const dimension = sizes[size]
 
   return (
     <div>
       <svg
-        className={classNames(dimension, "mr-2 mt-[-0.25rem] text-white inline-block animate-spin")}
+        className={classNames(dimension, height, width, "mr-2 mt-[-0.25rem] text-white inline-block animate-spin")}
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
         fill="none"
