@@ -13,7 +13,7 @@ interface SkeletonUserProps {
 const SkeletonUser: React.FC<SkeletonUserProps> = ({ className }) => {
   return (
     <svg
-      className={classNames("w-10 h-10 mb-3 text-gray-300 animate-pulse", className)}
+      className={classNames("w-10 h-10 mb-3 text-gray-200 animate-pulse", className)}
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 20 20"
       fill="currentColor"

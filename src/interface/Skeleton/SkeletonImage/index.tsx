@@ -16,12 +16,12 @@ const SkeletonImage: React.FC<SkeletonImageProps> = ({ className }) => {
       role="status"
       aria-hidden={true}
       className={classNames(
-        "h-48 mb-4 bg-gray-300 rounded-md flex items-center justify-center animate-pulse",
+        "h-48 mb-4 bg-gray-200 rounded-md flex items-center justify-center animate-pulse",
         className
       )}
     >
       <svg
-        className="w-10 h-10 text-gray-200"
+        className="w-10 h-10 text-gray-100"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 16 20"
         fill="currentColor"
