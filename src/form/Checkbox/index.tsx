@@ -25,7 +25,7 @@ interface CheckboxProps extends React.DetailedHTMLProps<React.InputHTMLAttribute
  * @param {string[]} fieldValues current values of the form checkbox
  * @param {string} errorMessage error message of the form checkbox
  * @param {CheckboxLayout} layout layout of the form checkbox
- * @param {Function} setValue callback for setting the form's value
+ * @param {Function} onValueChange callback for setting the form's value
  *
  * @returns renders Aether UI's checkbox component
  */
