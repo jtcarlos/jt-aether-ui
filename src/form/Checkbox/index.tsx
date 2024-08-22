@@ -13,7 +13,7 @@ interface CheckboxProps extends React.DetailedHTMLProps<React.InputHTMLAttribute
   fieldValues: string[]
   errorMessage?: string
   layout?: CheckboxLayout
-  setValue: (name: string, values: never[]) => void
+  onValueChange: (values: never[]) => void
 }
 
 /**
@@ -33,9 +33,9 @@ const Checkbox: React.FC<CheckboxProps> = ({
   name,
   label,
   options,
-  setValue,
   fieldValues,
   errorMessage,
+  onValueChange,
   layout = "vertical",
   ...props
 }) => {
@@ -45,7 +45,7 @@ const Checkbox: React.FC<CheckboxProps> = ({
     if (event.target.checked) newFieldValue.push(option)
     else newFieldValue = newFieldValue.filter((fieldValue) => fieldValue !== option)
 
-    setValue(name, newFieldValue as any)
+    onValueChange(newFieldValue as any)
   }
 
   return (
