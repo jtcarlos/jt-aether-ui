@@ -8,7 +8,7 @@ import { CheckboxLayout } from "./checkbox.types"
 
 interface CheckboxProps extends React.DetailedHTMLProps<React.InputHTMLAttributes<HTMLInputElement>, HTMLInputElement> {
   name: string
-  label: string
+  label?: string
   options: string[]
   fieldValues: string[]
   errorMessage?: string
@@ -56,9 +56,11 @@ const Checkbox: React.FC<CheckboxProps> = ({
         </symbol>
       </svg>
 
-      <label htmlFor={name} className="block mb-1 text-sm">
-        {label}
-      </label>
+      {label && (
+        <label htmlFor={name} className="block mb-1 text-sm">
+          {label}
+        </label>
+      )}
 
       <div
         className={classNames(
