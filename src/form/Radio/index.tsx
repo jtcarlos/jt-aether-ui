@@ -29,7 +29,7 @@ interface RadioProps extends React.DetailedHTMLProps<React.InputHTMLAttributes<H
  */
 const Radio: React.FC<RadioProps> = ({ name, label, options, errorMessage, onValueChange, layout = "vertical" }) => {
   return (
-    <div className="mb-5">
+    <div className="mb-3">
       <svg className="absolute w-0 h-0 select-none pointer-events-none">
         <symbol id="circle" viewBox="0 0 30 30">
           <circle cx="9" cy="9" r="4" />

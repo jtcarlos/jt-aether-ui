@@ -55,7 +55,7 @@ const Input: React.FC<InputProps> = ({
   const borderColor = error ? "border-danger" : "border-gray-200 focus:border-gray-500"
 
   return (
-    <div className="relative mb-3 w-full">
+    <div className="relative w-full mb-3">
       {icon && <FontAwesomeIcon className="absolute top-3 left-3 p-2 rounded-full text-gray-400" icon={icon} />}
 
       <input

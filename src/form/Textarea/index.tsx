@@ -24,7 +24,7 @@ const Textarea: React.FC<TextareaProps> = ({ name, label, errorMessage, ...props
   const borderColor = errorMessage ? "border-danger" : "border-gray-200 focus:border-gray-500"
 
   return (
-    <div className="relative w-full">
+    <div className="relative w-full mb-3">
       <textarea
         {...props}
         name={name}
