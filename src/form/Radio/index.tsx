@@ -45,7 +45,7 @@ const Radio: React.FC<RadioProps> = ({ name, label, options, errorMessage, onVal
       <div
         className={classNames(
           "rounded-lg inline-block",
-          { "p-2 mb-2 bg-red-100": errorMessage },
+          { "p-2 bg-red-100 bg-opacity-50": errorMessage },
           {
             flex: layout === "horizontal",
           }
