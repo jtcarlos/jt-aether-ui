@@ -54,18 +54,15 @@ const Modal: React.FC<ModalProps> = ({
       tabIndex={-1}
       aria-labelledby="aether-ui-modal"
       className={classNames(
-        "absolute w-screen h-screen top-0 left-0 z-10 overflow-x-hidden overflow-y-auto transition-all duration-200 ease-in-out",
+        "fixed w-screen h-screen top-0 left-0 z-10 overflow-x-hidden overflow-y-auto transition-all duration-200 ease-in-out",
         {
           "opacity-100": open,
           "opacity-0 pointer-events-none": !open,
         }
       )}
     >
-      <div
-        onClick={() => hidable && onHide?.()}
-        className="absolute size-full top-0 bg-black bg-opacity-40 start-0"
-      ></div>
-      <div className="absolute bottom-0 my-6 mx-4 sm:bottom-auto sm:top-1/2 sm:left-1/2 sm:translate-x-[-50%] sm:translate-y-[-70%]">
+      <div onClick={() => hidable && onHide?.()} className="fixed size-full top-0 bg-black bg-opacity-40 start-0"></div>
+      <div className="fixed bottom-0 my-6 mx-4 sm:bottom-auto sm:top-1/2 sm:left-1/2 sm:translate-x-[-50%] sm:translate-y-[-70%]">
         <div
           className={classNames(
             modalSize,
@@ -79,7 +76,7 @@ const Modal: React.FC<ModalProps> = ({
           {hidable && (
             <button
               onClick={onHide}
-              className="hidden sm:block absolute top-1 right-2 rounded-full p-1.5 text-center text-gray-400 hover:text-gray-900 transition-colors"
+              className="hidden sm:block fixed top-1 right-2 rounded-full p-1.5 text-center text-gray-400 hover:text-gray-900 transition-colors"
             >
               <FontAwesomeIcon icon={faXmark} />
             </button>
