@@ -22,9 +22,9 @@ interface FooterProps {
  */
 const Footer: React.FC<FooterProps> = ({ body, links, className, logo }) => {
   return (
-    <footer className={classNames("mt-20 pb-5 px-6 text-center border-t-2 border-slate-200", className)}>
+    <footer className={classNames("mt-20 px-3 py-6 text-center border-t-2 border-slate-200", className)}>
       {logo && (
-        <div className="py-3 flex justify-center">
+        <div className="pb-3 flex justify-center">
           <img
             width={logo.width}
             alt={logo.imageAlt}
