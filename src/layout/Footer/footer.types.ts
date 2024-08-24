@@ -8,3 +8,11 @@ export type FooterLinks = {
   target?: string
   label: React.ReactNode
 }[]
+
+export type FooterLogo = {
+  width: number
+  height: number
+  imageAlt: string
+  imageSource: string
+  onLogoClick?: () => void
+}
