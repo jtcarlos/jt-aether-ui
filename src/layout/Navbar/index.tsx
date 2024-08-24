@@ -47,8 +47,8 @@ const Navbar: React.FC<NavbarProps> = ({
   const alignment = navbarAlignment[align]
 
   return (
-    <nav className={classNames("sticky top-0 z-10 mb-10 border-b bg-white border-gray-200", className)}>
-      <div className="container mx-auto px-6 py-3 flex flex-wrap md:flex-nowrap justify-between items-center">
+    <nav className={classNames("sticky mb-10 top-0 z-10 border-b bg-white border-gray-200", className)}>
+      <div className="container mx-auto px-6 py-1 flex flex-wrap md:flex-nowrap justify-between items-center">
         <img
           width={logo.width}
           alt={logo.imageAlt}
@@ -76,7 +76,7 @@ const Navbar: React.FC<NavbarProps> = ({
           <ul
             className={classNames(
               { "hidden md:flex": !isDrawerOpen },
-              "rounded-md p-4 mt-4 w-full md:w-auto md:p-0 md:mt-0 md:space-x-2 border md:border-0 font-medium flex items-center flex-col md:flex-row border-gray-100 bg-gray-50 md:bg-white"
+              "rounded-md p-4 mt-4 w-full md:w-auto md:p-0 md:mt-0 md:space-x-1 border md:border-0 font-medium flex items-center flex-col md:flex-row border-gray-100 bg-gray-50 md:bg-white"
             )}
           >
             {links?.map((item, index) => (
