@@ -11,7 +11,7 @@ interface SkeletonRectangleProps {
  * @returns renders Aether UI's rectangular skeleton
  */
 const SkeletonRectangle: React.FC<SkeletonRectangleProps> = ({ className }) => {
-  return <div role="status" className={classNames("h-3 mb-3 bg-gray-200 rounded-full animate-pulse", className)} />
+  return <div role="status" className={classNames("h-[1rem] mb-3 bg-gray-200 rounded-full animate-pulse", className)} />
 }
 
 export default SkeletonRectangle
