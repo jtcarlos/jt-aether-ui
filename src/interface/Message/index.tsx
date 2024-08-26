@@ -11,6 +11,7 @@ interface MessageProps {
   fit?: boolean
   text?: string
   variant?: Variants
+  className?: string
   children?: React.ReactNode
 }
 
@@ -23,14 +24,20 @@ interface MessageProps {
  *
  * @returns {React.ReactNode} renders Aether UI's message component
  */
-const Message: React.FC<MessageProps> = ({ children, text, variant = "info", fit = true }) => {
+const Message: React.FC<MessageProps> = ({ children, text, className, variant = "info", fit = false }) => {
   const config = messageVariants[variant]
 
   return (
     <article
-      className={classNames("border-l-4 border border-slate-100 rounded-md p-5 border", config.color, {
-        "w-full md:w-[38rem]": fit,
-      })}
+      className={classNames(
+        config.color,
+        "border-l-4 border border-slate-100 rounded-md p-5",
+        {
+          "w-full md:w-[38rem]": fit,
+          "w-full": !fit,
+        },
+        className
+      )}
     >
       <Stack direction="row">
         <FontAwesomeIcon className={classNames("mt-1", config.iconColor)} icon={config.icon} />
