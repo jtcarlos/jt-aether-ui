@@ -7,9 +7,6 @@ Aether UI leverages the power of Tailwind CSS and FontAwesome for effortless and
 > [!NOTE]  
 > I have created this for my personal use, but I also will be sharing the code as I go for my personal portfolio.
 
-> [!WARNING]  
-> This is still an ongoing project, many more components will be added as well as there may be drastic change in the project in the future
-
 ## Pre-Requisites
 
 Aether UI mostly requires its dependencies from its peer so having the following installed is required for using this component library.
