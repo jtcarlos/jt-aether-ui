@@ -7,6 +7,9 @@ Aether UI leverages the power of Tailwind CSS and FontAwesome for effortless and
 > [!NOTE]  
 > I have created this for my personal use, but I also will be sharing the code as I go for my personal portfolio.
 
+> [!WARNING]  
+> Website documentation coming soon!
+
 ## Pre-Requisites
 
 Aether UI mostly requires its dependencies from its peer so having the following installed is required for using this component library.
@@ -65,6 +68,12 @@ export default Main
 ```
 
 ## Installing via NPM / Yarn
+**Using NPM**
+```console
+jtcarlos@github:~$ npm i aether-ui
+```
 
-> [!WARNING]  
-> This library is not yet published to NPM. Feature coming soon!
+**Using Yarn**
+```console
+jtcarlos@github:~$ yarn add aether-ui
+```
