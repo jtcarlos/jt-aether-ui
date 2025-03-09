@@ -17,11 +17,6 @@ Aether UI mostly requires its dependencies from its peer so having the following
 - `react`
 - `react-dom`
 - `tailwindcss`
-- `@fortawesome/fontawesome-svg-core`
-- `@fortawesome/free-brands-svg-icons`
-- `@fortawesome/free-regular-svg-iconse`
-- `@fortawesome/free-solid-svg-icons`
-- `@fortawesome/react-fontawesome`
 
 ## Testing Locally
 
