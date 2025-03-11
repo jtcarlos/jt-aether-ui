@@ -47,7 +47,7 @@ const Button: React.FC<ButtonProps> = ({ children, text, size = "md", variant = 
       className={classNames(
         textSize,
         buttonColor,
-        "rounded-md font-semibold shadow-sm transition-colors disabled:opacity-75",
+        "rounded-md font-semibold shadow-sm transition-colors disabled:opacity-75 cursor-pointer",
         props?.className
       )}
     >
