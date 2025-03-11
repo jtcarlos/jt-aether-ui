@@ -83,7 +83,7 @@ const Navbar: React.FC<NavbarProps> = ({
               <li key={index} className="w-full md:w-auto">
                 <button
                   className={classNames(
-                    "px-3 py-2 w-full md:w-auto rounded-md text-left border border-transparent hover:bg-primary-lighter hover:text-primary transition-colors ",
+                    "px-3 py-2 w-full md:w-auto rounded-md text-left border border-transparent hover:bg-primary-lighter hover:text-primary transition-colors cursor-pointer",
                     {
                       "bg-primary text-white md:bg-white md:text-primary": pageTitle === item?.label,
                     }
